@@ -1,0 +1,48 @@
+
+  // Reservation Donut Chart
+    var reservationOptions = {
+      series: [25, 15, 10, 5], // Example values: Pending, Arrived, Departed, Cancelled
+      chart: {
+        type: 'donut',
+        height: '100%'
+      },
+      labels: ['Pending', 'Arrived', 'Departed', 'Cancelled'],
+      colors: ['#FFB64D', '#00E396', '#775DD0', '#F86624'],
+      responsive: [{
+        breakpoint: 768,
+        options: {
+          chart: {
+            width: '100%'
+          },
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }]
+    };
+    var reservationChart = new ApexCharts(document.querySelector("#reservation-donut"), reservationOptions);
+    reservationChart.render();
+  
+    // Rooms Donut Chart
+    var roomsOptions = {
+      series: [10, 20, 30, 5, 15, 10], // Example values: Dirty, Occupied, Available, Maintenance, Clean, Reserved
+      chart: {
+        type: 'donut',
+        height: '100%'
+      },
+      labels: ['Dirty', 'Occupied', 'Available', 'Maintenance', 'Clean', 'Reserved'],
+      colors: ['#FF4560', '#00E396', '#008FFB', '#FEB019', '#775DD0', '#F86624'],
+      responsive: [{
+        breakpoint: 768,
+        options: {
+          chart: {
+            width: '100%'
+          },
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }]
+    };
+    var roomsChart = new ApexCharts(document.querySelector("#rooms-donut"), roomsOptions);
+    roomsChart.render();
